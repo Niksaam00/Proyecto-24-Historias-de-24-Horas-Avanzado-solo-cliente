@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <header class="encabezado">
+            <h1>Mis Historias</h1>
+
+        </header>
+
+        <section class="seccion-historias">
+            <h2>Mis historias</h2>
+
+            <div class="lista-historias" id="listaHistorias">
+
+                <button class="boton-agregar" id="agregarHistoria">
+                    <span>+</span>
+                    <small>Agregar</small>
+                </button>
+
+            </div>
+
+            <input type="file" id="entradaImagen" accept="image/*" hidden>
+        </section>
+    </main>
+
+    <div class="visor-historias" id="visorHistorias">
+
+        <div class="contenido-historia">
+
+            <div class="contenedor-progreso" id="contenedorProgreso"></div>
+
+            <button class="cerrar-historia" id="cerrarHistoria">×</button>
+
+            <img src="" alt="Historia" id="imagenHistoria">
+
+            <button class="historia-anterior" id="historiaAnterior">‹</button>
+            <button class="siguiente-historia" id="siguienteHistoria">›</button>
+
+        </div>
+
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

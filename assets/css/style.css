@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf3fc;
+    color: #193653;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 500px;
+    box-shadow: 0 4px 15px rgba(30, 80, 130, 0.10);
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.encabezado h1 {
+    color: #1765a8;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.seccion-historias h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.lista-historias {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    min-height: 100px;
+}
+
+.boton-agregar {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    color: #527a9e;
+}
+
+.boton-agregar span {
+    width: 65px;
+    height: 65px;
+    border: 2px dashed #438bc5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #438bc5;
+    background: #f0f7ff;
+}
+
+.boton-agregar:hover span {
+    background: #d9ebfc;
+}
+
+.boton-agregar small {
+    font-size: 12px;
+}
+
+.elemento-historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.imagen-historia {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 3px solid #3185c8;
+    background: white;
+    object-fit: cover;
+}
+
+.elemento-historia small {
+    color: #527a9e;
+    font-size: 12px;
+}
+
+.visor-historias {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 25, 45, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.visor-historias.activa {
+    display: flex;
+}
+
+.contenido-historia {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 90vh;
+    max-height: 750px;
+    background: #102e4c;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.contenido-historia img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contenedor-progreso {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    z-index: 5;
+}
+
+.barra-progreso {
+    height: 4px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.relleno-progreso {
+    width: 0;
+    height: 100%;
+    background: white;
+}
+
+.relleno-progreso.completada {
+    width: 100%;
+}
+
+.relleno-progreso.activa {
+    width: 100%;
+    transition: width 3s linear;
+}
+
+.cerrar-historia {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    z-index: 10;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.historia-anterior,
+.siguiente-historia {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 35px;
+    width: 35px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.historia-anterior {
+    left: 5px;
+}
+
+.siguiente-historia {
+    right: 5px;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        width: 94%;
+        margin: 20px auto;
+        padding: 18px;
+    }
+
+    .encabezado h1 {
+        font-size: 25px;
+    }
+
+    .contenido-historia {
+        height: 90vh;
+        width: 94%;
+    }
+}
